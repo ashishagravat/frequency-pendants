@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔮 Mystic Frequency Pendants - Healing Energy Jewelry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%);
+            min-height: 100vh;
+            color: #333;
+            background-attachment: fixed;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+                radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+            background-repeat: repeat;
+            background-size: 200px 100px;
+            animation: sparkle 3s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            color: #fff;
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(45deg, #ffd700, #ffb347, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: #e0e0e0;
+            font-size: 1.3em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .admin-access {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .admin-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+
+        /* Customer Interface */
+        .customer-interface {
+            display: block;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .frequency-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .cart-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            margin-bottom: 25px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .category-tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .category-tab {
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 179, 71, 0.2));
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .category-tab:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 179, 71, 0.3));
+        }
+
+        .category-tab.active {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            color: #1a1a2e;
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .category-icon {
+            font-size: 1.5em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .frequency-categories {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .frequency-group {
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .group-header {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 179, 71, 0.15));
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .group-header:hover {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(255, 179, 71, 0.25));
+        }
+
+        .group-header .arrow {
+            transition: transform 0.3s ease;
+            color: #ffd700;
+            font-size: 1.2em;
+        }
+
+        .group-header.expanded .arrow {
+            transform: rotate(90deg);
+        }
+
+        .group-content {
+            display: none;
+            padding: 0;
+        }
+
+        .group-content.show {
+            display: block;
+        }
+
+        .frequency-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background-color 0.3s ease;
+            color: #e0e0e0;
+        }
+
+        .frequency-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .frequency-item:last-child {
+            border-bottom: none;
+        }
+
+        .frequency-name {
+            font-weight: 500;
+            flex: 1;
+            color: #fff;
+        }
+
+        .frequency-values {
+            color: #4ecdc4;
+            font-family: monospace;
+            margin: 0 15px;
+            font-size: 0.9em;
+            background: rgba(78, 205, 196, 0.1);
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+
+        .add-btn {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .add-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+        }
+
+        .cart h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .cart-item-name {
+            font-weight: 500;
+            color: #fff;
+            flex: 1;
+            font-size: 0.9em;
+        }
+
+        .cart-item-freq {
+            color: #4ecdc4;
+            font-family: monospace;
+            font-size: 0.8em;
+            margin: 0 8px;
+            background: rgba(78, 205, 196, 0.1);
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+        .remove-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.8em;
+            transition: all 0.3s ease;
+        }
+
+        .remove-btn:hover {
+            background: #ff5252;
+            transform: translateY(-1px);
+        }
+
+        .proceed-checkout-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #ffd700, #ffb347);
+            color: #1a1a2e;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .proceed-checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        .proceed-checkout-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .frequency-count {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-left: 10px;
+            box-shadow: 0 3px 10px rgba(78, 205, 196, 0.3);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Checkout Interface */
+        .checkout-interface {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .checkout-header h2 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .checkout-steps {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+        }
+
+        .step.active {
+            color: #ffd700;
+        }
+
+        .step.completed {
+            color: #4ecdc4;
+        }
+
+        .step-number {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: 600;
+        }
+
+        .step.active .step-number {
+            background: #ffd700;
+            color: #1a1a2e;
+        }
+
+        .step.completed .step-number {
+            background: #4ecdc4;
+            color: #fff;
+        }
+
+        .checkout-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 40px;
+        }
+
+        .checkout-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .country-select {
+            position: relative;
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .payment-method {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            color: #fff;
+        }
+
+        .payment-method:hover {
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .payment-method.selected {
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .payment-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .order-summary {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            height: fit-content;
+        }
+
+        .order-summary h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .pendant-selection {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .pendant-options {
+            display: grid;
+            gap: 10px;
+        }
+
+        .pendant-option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pendant-option:hover {
+            border-color: #ffd700;
+        }
+
+        .pendant-option.selected {
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .price-breakdown {
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+
+        .price-row.total {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #ffd700;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 10px;
+            margin-top: 15px;
+        }
+
+        .place-order-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .place-order-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* Admin Interface */
+        .admin-interface {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .admin-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .admin-header h2 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .admin-login {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .admin-dashboard {
+            display: none;
+        }
+
+        .order-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .frequency-code {
+            background: rgba(0, 0, 0, 0.4);
+            color: #4ecdc4;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 14px;
+            margin: 15px 0;
+            position: relative;
+            border: 1px solid rgba(78, 205, 196, 0.3);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4ecdc4;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8em;
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(78, 205, 196, 0.3);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .success-interface {
+            display: none;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 60px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .success-icon {
+            font-size: 4em;
+            color: #4ecdc4;
+            margin-bottom: 20px;
+        }
+
+        .success-message {
+            color: #fff;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content, .checkout-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-panel, .order-summary {
+                position: static;
+            }
+            
+            .category-tabs {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #ffd700, #ffb347);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #ffb347, #ffd700);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <div class="admin-access">
+        <button class="admin-btn" onclick="showAdminLogin()">👑 Admin Access</button>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Mystic Frequency Pendants</h1>
+            <p>✨ Personalized Healing Energy Jewelry - Choose Your Sacred Frequencies ✨</p>
+        </div>
+
+        <!-- Customer Interface -->
+        <div class="customer-interface" id="customer-interface">
+            <div class="main-content">
+                <div class="frequency-panel">
+                    <input type="text" class="search-box" placeholder="🔍 Search for healing frequencies..." onkeyup="filterFrequencies()">
+                    
+                    <div class="category-tabs">
+                        <div class="category-tab active" onclick="switchCategory('health')">
+                            <span class="category-icon">🏥</span>
+                            Health & Healing
+                        </div>
+                        <div class="category-tab" onclick="switchCategory('chakras')">
+                            <span class="category-icon">🧘‍♀️</span>
+                            Sacred Chakras
+                        </div>
+                        <div class="category-tab" onclick="switchCategory('planets')">
+                            <span class="category-icon">🪐</span>
+                            Planetary Powers
+                        </div>
+                        <div class="category-tab" onclick="switchCategory('special')">
+                            <span class="category-icon">✨</span>
+                            Spiritual Enhancement
+                        </div>
+                    </div>
+
+                    <div class="frequency-categories" id="frequency-display">
+                        <!-- Content will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="cart-panel">
+                    <div class="cart">
+                        <h3>🛒 Your Sacred Selection <span class="frequency-count" id="cart-count">0</span></h3>
+                        <div id="cart-items">
+                            <div class="empty-state">
+                                <p>✨ No frequencies selected yet ✨</p>
+                                <p>Choose your healing energies</p>
+                            </div>
+                        </div>
+                        
+                        <button class="proceed-checkout-btn" onclick="proceedToCheckout()" disabled>
+                            🛒 Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Interface -->
+        <div class="checkout-interface" id="checkout-interface">
+            <button class="back-btn" onclick="backToShopping()">← Back to Shopping</button>
+            
+            <div class="checkout-header">
+                <h2>🛒 Secure Checkout</h2>
+                <div class="checkout-steps">
+                    <div class="step completed">
+                        <div class="step-number">1</div>
+                        <span>Select Frequencies</span>
+                    </div>
+                    <div class="step active">
+                        <div class="step-number">2</div>
+                        <span>Shipping & Payment</span>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <span>Confirmation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-content">
+                <div class="checkout-form">
+                    <div class="form-section">
+                        <h3>📋 Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" id="first-name" placeholder="Enter first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" id="last-name" placeholder="Enter last name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" id="customer-email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" id="customer-phone" placeholder="Your phone number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>🏠 Shipping Address</h3>
+                        <div class="form-group">
+                            <label>Country *</label>
+                            <select id="country-select" onchange="updateCurrency()" required>
+                                <option value="">Select Country</option>
+                                <option value="US">🇺🇸 United States</option>
+                                <option value="IN">🇮🇳 India</option>
+                                <option value="GB">🇬🇧 United Kingdom</option>
+                                <option value="CA">🇨🇦 Canada</option>
+                                <option value="AU">🇦🇺 Australia</option>
+                                <option value="DE">🇩🇪 Germany</option>
+                                <option value="FR">🇫🇷 France</option>
+                                <option value="JP">🇯🇵 Japan</option>
+                                <option value="BR">🇧🇷 Brazil</option>
+                                <option value="RU">🇷🇺 Russia</option>
+                                <option value="CN">🇨🇳 China</option>
+                                <option value="MX">🇲🇽 Mexico</option>
+                                <option value="IT">🇮🇹 Italy</option>
+                                <option value="ES">🇪🇸 Spain</option>
+                                <option value="KR">🇰🇷 South Korea</option>
+                                <option value="NL">🇳🇱 Netherlands</option>
+                                <option value="SE">🇸🇪 Sweden</option>
+                                <option value="NO">🇳🇴 Norway</option>
+                                <option value="CH">🇨🇭 Switzerland</option>
+                                <option value="AE">🇦🇪 UAE</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Line 1 *</label>
+                            <input type="text" id="address-1" placeholder="Street address" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Line 2</label>
+                            <input type="text" id="address-2" placeholder="Apartment, suite, etc.">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>City *</label>
+                                <input type="text" id="city" placeholder="City" required>
+                            </div>
+                            <div class="form-group">
+                                <label>State/Province *</label>
+                                <input type="text" id="state" placeholder="State/Province" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Postal Code *</label>
+                            <input type="text" id="postal-code" placeholder="Postal code" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>💳 Payment Method</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method" onclick="selectPayment('card')">
+                                <div class="payment-icon">💳</div>
+                                <div>Credit/Debit Card</div>
+                            </div>
+                            <div class="payment-method" onclick="selectPayment('paypal')">
+                                <div class="payment-icon">💰</div>
+                                <div>PayPal</div>
+                            </div>
+                            <div class="payment-method" onclick="selectPayment('crypto')">
+                                <div class="payment-icon">₿</div>
+                                <div>Cryptocurrency</div>
+                            </div>
+                            <div class="payment-method" onclick="selectPayment('bank')">
+                                <div class="payment-icon">🏦</div>
+                                <div>Bank Transfer</div>
+                            </div>
+                        </div>
+                        
+                        <div id="payment-details" style="margin-top: 20px; display: none;">
+                            <!-- Payment details will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>📝 Special Instructions</h3>
+                        <div class="form-group">
+                            <textarea id="special-instructions" rows="3" placeholder="Any special requests or notes for your pendant..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3>📦 Order Summary</h3>
+                    
+                    <div class="pendant-selection">
+                        <h4 style="color: #fff; margin-bottom: 15px;">💎 Choose Your Pendant</h4>
+                        <div class="pendant-options">
+                            <div class="pendant-option" onclick="selectPendant('silver', 49)" data-pendant="silver">
+                                <span>🥈 Silver Pendant</span>
+                                <span class="pendant-price" data-base-price="49">$49</span>
+                            </div>
+                            <div class="pendant-option" onclick="selectPendant('gold', 79)" data-pendant="gold">
+                                <span>🥇 Gold Pendant</span>
+                                <span class="pendant-price" data-base-price="79">$79</span>
+                            </div>
+                            <div class="pendant-option" onclick="selectPendant('crystal', 65)" data-pendant="crystal">
+                                <span>💎 Crystal Pendant</span>
+                                <span class="pendant-price" data-base-price="65">$65</span>
+                            </div>
+                            <div class="pendant-option" onclick="selectPendant('copper', 39)" data-pendant="copper">
+                                <span>🟤 Copper Pendant</span>
+                                <span class="pendant-price" data-base-price="39">$39</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                        <h4 style="color: #4ecdc4; margin-bottom: 10px;">Selected Frequencies:</h4>
+                        <div id="checkout-frequencies" style="max-height: 200px; overflow-y: auto; font-size: 0.9em; color: #e0e0e0;">
+                            <!-- Selected frequencies will be shown here -->
+                        </div>
+                    </div>
+
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Pendant:</span>
+                            <span id="pendant-cost">$0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Frequency Programming:</span>
+                            <span id="programming-cost">$15</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Shipping:</span>
+                            <span id="shipping-cost">$12</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total:</span>
+                            <span id="total-cost">$0</span>
+                        </div>
+                    </div>
+
+                    <button class="place-order-btn" onclick="placeOrder()">
+                        🛒 Place Sacred Order
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Interface -->
+        <div class="success-interface" id="success-interface">
+            <div class="success-icon">✅</div>
+            <div class="success-message">
+                <h2 style="color: #4ecdc4; margin-bottom: 15px;">Order Placed Successfully!</h2>
+                <p style="color: #e0e0e0; margin-bottom: 20px;">Thank you for your purchase. Your sacred pendant will be programmed with your selected frequencies and shipped to you within 3-5 business days.</p>
+                <p style="color: #ffd700; font-size: 1.1em;">Order ID: <strong id="order-id-display"></strong></p>
+            </div>
+            <button class="proceed-checkout-btn" onclick="startNewOrder()" style="margin-top: 30px;">
+                🛒 Place Another Order
+            </button>
+        </div>
+
+        <!-- Admin Interface -->
+        <div class="admin-interface" id="admin-interface">
+            <div class="admin-header">
+                <h2>👑 Admin Dashboard</h2>
+            </div>
+
+            <div class="admin-login" id="admin-login">
+                <div class="form-group">
+                    <label>Admin Password</label>
+                    <input type="password" id="admin-password" placeholder="Enter admin password">
+                </div>
+                <button class="place-order-btn" onclick="adminLogin()">Login</button>
+                <button class="back-btn" onclick="closeAdmin()" style="width: 100%; margin-top: 10px;">Close</button>
+            </div>
+
+            <div class="admin-dashboard" id="admin-dashboard">
+                <button class="back-btn" onclick="closeAdmin()">← Close Admin Panel</button>
+                <div id="orders-list">
+                    <div class="empty-state">
+                        <h3>📋 No orders yet</h3>
+                        <p>Customer orders will appear here automatically</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Currency conversion rates (you can update these with real API)
+        const currencyRates = {
+            US: { symbol: '$', rate: 1, name: 'USD' },
+            IN: { symbol: '₹', rate: 83, name: 'INR' },
+            GB: { symbol: '£', rate: 0.79, name: 'GBP' },
+            CA: { symbol: 'C$', rate: 1.35, name: 'CAD' },
+            AU: { symbol: 'A$', rate: 1.52, name: 'AUD' },
+            DE: { symbol: '€', rate: 0.85, name: 'EUR' },
+            FR: { symbol: '€', rate: 0.85, name: 'EUR' },
+            JP: { symbol: '¥', rate: 110, name: 'JPY' },
+            BR: { symbol: 'R$', rate: 5.2, name: 'BRL' },
+            RU: { symbol: '₽', rate: 75, name: 'RUB' },
+            CN: { symbol: '¥', rate: 6.45, name: 'CNY' },
+            MX: { symbol: '$', rate: 17.8, name: 'MXN' },
+            IT: { symbol: '€', rate: 0.85, name: 'EUR' },
+            ES: { symbol: '€', rate: 0.85, name: 'EUR' },
+            KR: { symbol: '₩', rate: 1180, name: 'KRW' },
+            NL: { symbol: '€', rate: 0.85, name: 'EUR' },
+            SE: { symbol: 'kr', rate: 8.6, name: 'SEK' },
+            NO: { symbol: 'kr', rate: 8.8, name: 'NOK' },
+            CH: { symbol: 'CHF', rate: 0.92, name: 'CHF' },
+            AE: { symbol: 'د.إ', rate: 3.67, name: 'AED' }
+        };
+
+        // Enhanced frequency data with better organization
+        const frequencyData = {
+            health: {
+                "🩺 Pain & Inflammation": [
+                    {name: "Abdominal Cramps", frequencies: [7, 95, 190, 304]},
+                    {name: "Abdominal Pain", frequencies: [124, 3000, 95, 160]},
+                    {name: "Acute Pain", frequencies: [160, 333, 727, 1550, 3000]},
+                    {name: "Backache", frequencies: [9, 7, 432, 728, 787]},
+                    {name: "Backache & Spasms", frequencies: [120, 424, 727, 880, 1550]},
+                    {name: "Chest Pain", frequencies: [100, 260, 650, 5810, 550]},
+                    {name: "Elbow Pain", frequencies: [26, 160, 250, 2720, 3000]},
+                    {name: "Headaches", frequencies: [144, 160, 520, 10, 304]},
+                    {name: "Hip Pain", frequencies: [20, 660, 690, 727, 880]},
+                    {name: "Joint Pain", frequencies: [160, 324, 500, 1600, 5000]},
+                    {name: "Knee Pain", frequencies: [7, 28, 727, 880, 1550]},
+                    {name: "Neck Pain", frequencies: [80, 490, 730, 800, 5000]},
+                    {name: "Pain Relief", frequencies: [304, 5000, 3000, 666, 80]},
+                    {name: "Sciatica", frequencies: [254, 464, 465, 866, 25]},
+                    {name: "Surgical Pain", frequencies: [95, 2720, 3000, 2720, 3000]},
+                    {name: "Toothache", frequencies: [3000, 95, 1800, 787, 465]}
+                ],
+                "🫁 Respiratory System": [
+                    {name: "Asthma", frequencies: [20, 72, 125, 880, 2720]},
+                    {name: "Bronchitis", frequencies: [344, 514, 880, 3672]},
+                    {name: "Chest Infection", frequencies: [72, 333, 452, 683]},
+                    {name: "Cold Common", frequencies: [120, 550, 850, 2500, 3500]},
+                    {name: "Coughing", frequencies: [522, 1550, 444, 3702, 95]},
+                    {name: "Emphysema", frequencies: [75, 240, 777, 2404, 3672]},
+                    {name: "Flu", frequencies: [20, 440, 787, 1500, 3672]},
+                    {name: "Influenza", frequencies: [125, 440, 787, 880, 5316]},
+                    {name: "Laryngitis", frequencies: [30, 240, 600, 800, 5000]},
+                    {name: "Pneumonia", frequencies: [5000, 1238, 772, 450, 20]},
+                    {name: "Respiratory Diseases", frequencies: [5, 823, 214]},
+                    {name: "Sinusitis", frequencies: [728, 72, 146, 1600, 683]},
+                    {name: "Sore Throat", frequencies: [1550, 880, 46, 766]},
+                    {name: "Tonsillitis", frequencies: [73, 1550, 787, 144, 582]}
+                ],
+                "🩸 Blood & Circulation": [
+                    {name: "Anemia Iron Deficiency", frequencies: [100, 320, 2500, 3000, 5000]},
+                    {name: "Blood Circulation", frequencies: [9, 16, 17, 40]},
+                    {name: "Blood Cleanser", frequencies: [727, 880, 2008, 2127, 5000]},
+                    {name: "High Blood Pressure", frequencies: [9, 727, 787, 880]},
+                    {name: "Low Blood Pressure", frequencies: [20, 727, 787, 880]},
+                    {name: "Blood Sugar High", frequencies: [324, 20, 787, 1865, 5000]},
+                    {name: "Blood Sugar Low", frequencies: [3, 26, 250, 1550, 2720]},
+                    {name: "Cholesterol", frequencies: [1800, 1600, 1500, 776, 20]},
+                    {name: "Heart General", frequencies: [20, 81, 162, 5000]},
+                    {name: "Heart Palpitations", frequencies: [727, 787, 880]}
+                ],
+                "🦠 Infections & Immunity": [
+                    {name: "Bacteria General", frequencies: [20, 690, 787, 866, 1550]},
+                    {name: "Candida", frequencies: [3176, 1151, 866, 386, 64]},
+                    {name: "Fungal Infection", frequencies: [20, 465, 727, 802, 1550]},
+                    {name: "Immune System", frequencies: [30, 727, 880, 1550, 5000]},
+                    {name: "Infections General", frequencies: [48, 444, 786, 1865, 5500]},
+                    {name: "Parasites General", frequencies: [187, 453, 772, 1113, 3437]},
+                    {name: "Urinary Tract Infection", frequencies: [2050, 880, 1550, 1020, 539]},
+                    {name: "Virus General", frequencies: [344, 633, 944, 3443, 6534]},
+                    {name: "Yeast General", frequencies: [72, 254, 987, 1016, 2222]}
+                ],
+                "🧠 Nervous System": [
+                    {name: "Alzheimers", frequencies: [430, 624, 5000, 742, 23]},
+                    {name: "Anxiety Disorders", frequencies: [80, 870, 5810, 3000, 620]},
+                    {name: "Depression General", frequencies: [5000]},
+                    {name: "Dizziness", frequencies: [4, 6, 60]},
+                    {name: "Epilepsy", frequencies: [21, 125, 633, 802, 1550]},
+                    {name: "Insomnia", frequencies: [10, 304, 880, 1500, 1550]},
+                    {name: "Memory Problems", frequencies: [6]},
+                    {name: "Multiple Sclerosis", frequencies: [80, 660, 787, 3056, 5000]},
+                    {name: "Nerve Disorders", frequencies: [72, 440, 727, 1550, 2720]},
+                    {name: "Numbness", frequencies: [2720, 1600, 880, 625, 440]},
+                    {name: "Parkinsons Disease", frequencies: [470, 813, 5000, 1131, 33]},
+                    {name: "Stroke", frequencies: [230, 3]},
+                    {name: "Vertigo", frequencies: [50, 410, 3000, 4000, 5000]}
+                ]
+            },
+            chakras: {
+                "🔴 Root Chakra (Muladhara)": [
+                    {name: "Root Chakra Balance", frequencies: [430]},
+                    {name: "Grounding Energy", frequencies: [256, 396]},
+                    {name: "Security & Stability", frequencies: [194, 256]}
+                ],
+                "🟠 Sacral Chakra (Svadhishthana)": [
+                    {name: "Sacral Chakra Balance", frequencies: [480]},
+                    {name: "Creativity & Passion", frequencies: [288, 417]},
+                    {name: "Emotional Healing", frequencies: [303, 417]}
+                ],
+                "🟡 Solar Plexus (Manipura)": [
+                    {name: "Solar Plexus Balance", frequencies: [530]},
+                    {name: "Personal Power", frequencies: [320, 528]},
+                    {name: "Confidence Boost", frequencies: [341, 528]}
+                ],
+                "💚 Heart Chakra (Anahata)": [
+                    {name: "Heart Chakra Balance", frequencies: [570]},
+                    {name: "Love & Compassion", frequencies: [341, 639]},
+                    {name: "Emotional Healing", frequencies: [384, 639]}
+                ],
+                "🔵 Throat Chakra (Vishuddha)": [
+                    {name: "Throat Chakra Balance", frequencies: [630]},
+                    {name: "Communication", frequencies: [384, 741]},
+                    {name: "Truth & Expression", frequencies: [426, 741]}
+                ],
+                "🟣 Third Eye (Ajna)": [
+                    {name: "Third Eye Balance", frequencies: [660]},
+                    {name: "Intuition & Wisdom", frequencies: [432, 852]},
+                    {name: "Spiritual Insight", frequencies: [480, 852]}
+                ],
+                "🤍 Crown Chakra (Sahasrara)": [
+                    {name: "Crown Chakra Balance", frequencies: [700]},
+                    {name: "Divine Connection", frequencies: [480, 963]},
+                    {name: "Spiritual Awakening", frequencies: [540, 963]}
+                ]
+            },
+            planets: {
+                "☀️ Sun Energy": [
+                    {name: "Sun Power", frequencies: [126]},
+                    {name: "Leadership & Authority", frequencies: [126, 183]},
+                    {name: "Vitality & Life Force", frequencies: [126, 396]}
+                ],
+                "🌙 Moon Energy": [
+                    {name: "Moon Power", frequencies: [227]},
+                    {name: "Intuition & Emotions", frequencies: [227, 417]},
+                    {name: "Feminine Energy", frequencies: [227, 528]}
+                ],
+                "🔴 Mars Energy": [
+                    {name: "Mars Power", frequencies: [144]},
+                    {name: "Courage & Strength", frequencies: [144, 528]},
+                    {name: "Action & Drive", frequencies: [144, 741]}
+                ],
+                "💚 Mercury Energy": [
+                    {name: "Mercury Power", frequencies: [141]},
+                    {name: "Communication & Intelligence", frequencies: [141, 741]},
+                    {name: "Quick Thinking", frequencies: [141, 852]}
+                ],
+                "🟡 Jupiter Energy": [
+                    {name: "Jupiter Power", frequencies: [183]},
+                    {name: "Wisdom & Growth", frequencies: [183, 639]},
+                    {name: "Abundance & Luck", frequencies: [183, 528]}
+                ],
+                "💖 Venus Energy": [
+                    {name: "Venus Power", frequencies: [221]},
+                    {name: "Love & Beauty", frequencies: [221, 639]},
+                    {name: "Artistic Inspiration", frequencies: [221, 417]}
+                ],
+                "🔵 Saturn Energy": [
+                    {name: "Saturn Power", frequencies: [147]},
+                    {name: "Discipline & Structure", frequencies: [147, 396]},
+                    {name: "Karmic Lessons", frequencies: [147, 528]}
+                ],
+                "🌫️ Rahu Energy": [
+                    {name: "Rahu Power", frequencies: [396]},
+                    {name: "Transformation", frequencies: [396, 741]},
+                    {name: "Breaking Limitations", frequencies: [396, 852]}
+                ],
+                "⚫ Ketu Energy": [
+                    {name: "Ketu Power", frequencies: [900]},
+                    {name: "Spiritual Liberation", frequencies: [900, 963]},
+                    {name: "Past Life Healing", frequencies: [900, 528]}
+                ]
+            },
+            special: {
+                "✨ Solfeggio Frequencies": [
+                    {name: "396 Hz - Liberation from Fear", frequencies: [396]},
+                    {name: "417 Hz - Facilitating Change", frequencies: [417]},
+                    {name: "528 Hz - Love & DNA Repair", frequencies: [528]},
+                    {name: "639 Hz - Relationship Harmony", frequencies: [639]},
+                    {name: "741 Hz - Awakening Intuition", frequencies: [741]},
+                    {name: "852 Hz - Spiritual Order", frequencies: [852]},
+                    {name: "963 Hz - Divine Connection", frequencies: [963]}
+                ],
+                "🧠 Mental Enhancement": [
+                    {name: "Accelerate Learning", frequencies: [6]},
+                    {name: "Memory Increase", frequencies: [6]},
+                    {name: "Mental Clarity", frequencies: [12]},
+                    {name: "Mental Concentration", frequencies: [5000, 7]},
+                    {name: "Creativity Boost", frequencies: [8, 183]},
+                    {name: "Intuition Awakening", frequencies: [741]}
+                ],
+                "🌟 Spiritual Powers": [
+                    {name: "Third Eye Opening", frequencies: [83]},
+                    {name: "Spiritual Awakening", frequencies: [183]},
+                    {name: "Divine Connection", frequencies: [963]},
+                    {name: "Astral Projection", frequencies: [111, 528]},
+                    {name: "Psychic Abilities", frequencies: [741, 852]},
+                    {name: "Meditation Enhancement", frequencies: [40, 528]}
+                ],
+                "🛡️ Protection & Cleansing": [
+                    {name: "Black Magic Protection", frequencies: [691]},
+                    {name: "Negative Energy Cleansing", frequencies: [417, 528]},
+                    {name: "Aura Cleansing", frequencies: [528, 741]},
+                    {name: "Space Clearing", frequencies: [396, 528]},
+                    {name: "Psychic Protection", frequencies: [528, 852]}
+                ]
+            }
+        };
+
+        let cart = [];
+        let orders = JSON.parse(localStorage.getItem('frequencyOrders') || '[]');
+        let currentCategory = 'health';
+        let selectedPendant = { type: '', price: 0 };
+        let selectedPayment = '';
+        let currentCurrency = { symbol: '$', rate: 1, code: 'USD' };
+
+        // Initialize the page
+        function init() {
+            loadCategory('health');
+            updateCartDisplay();
+            updateOrdersDisplay();
+            
+            // Add form field listeners for checkout
+            const checkoutFields = ['first-name', 'last-name', 'customer-email', 'customer-phone', 'country-select', 'address-1', 'city', 'state', 'postal-code'];
+            checkoutFields.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.addEventListener('input', validateCheckoutForm);
+                    element.addEventListener('change', validateCheckoutForm);
+                }
+            });
+        }
+
+        // Switch category
+        function switchCategory(category) {
+            document.querySelectorAll('.category-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            currentCategory = category;
+            loadCategory(category);
+        }
+
+        // Load category content
+        function loadCategory(category) {
+            const container = document.getElementById('frequency-display');
+            const categoryData = frequencyData[category];
+            
+            container.innerHTML = '';
+            
+            Object.keys(categoryData).forEach(groupName => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'frequency-group';
+                
+                const groupHeader = document.createElement('div');
+                groupHeader.className = 'group-header';
+                groupHeader.innerHTML = `
+                    <span>${groupName}</span>
+                    <span class="arrow">▶</span>
+                `;
+                groupHeader.onclick = () => toggleGroup(groupHeader);
+                
+                const groupContent = document.createElement('div');
+                groupContent.className = 'group-content';
+                
+                categoryData[groupName].forEach((item, index) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'frequency-item';
+                    itemDiv.innerHTML = `
+                        <div class="frequency-name">${item.name}</div>
+                        <div class="frequency-values">[${item.frequencies.join(', ')}]</div>
+                        <button class="add-btn" onclick="addToCart('${category}', '${groupName}', ${index})">Add ✨</button>
+                    `;
+                    groupContent.appendChild(itemDiv);
+                });
+                
+                groupDiv.appendChild(groupHeader);
+                groupDiv.appendChild(groupContent);
+                container.appendChild(groupDiv);
+            });
+        }
+
+        // Toggle group visibility
+        function toggleGroup(header) {
+            const content = header.nextElementSibling;
+            
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                header.classList.remove('expanded');
+            } else {
+                content.classList.add('show');
+                header.classList.add('expanded');
+            }
+        }
+
+        // Add item to cart
+        function addToCart(category, groupName, index) {
+            const item = frequencyData[category][groupName][index];
+            const cartItem = {
+                id: Date.now() + Math.random(),
+                name: item.name,
+                frequencies: item.frequencies,
+                category: category,
+                group: groupName
+            };
+            
+            cart.push(cartItem);
+            updateCartDisplay();
+            updateProceedButton();
+            showToast(`✨ Added "${item.name}" to your sacred selection!`);
+        }
+
+        // Remove item from cart
+        function removeFromCart(id) {
+            const item = cart.find(item => item.id === id);
+            cart = cart.filter(item => item.id !== id);
+            updateCartDisplay();
+            updateProceedButton();
+            showToast(`Removed "${item.name}" from selection`);
+        }
+
+        // Update cart display
+        function updateCartDisplay() {
+            const cartContainer = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            
+            cartCount.textContent = cart.length;
+            
+            if (cart.length === 0) {
+                cartContainer.innerHTML = `
+                    <div class="empty-state">
+                        <p>✨ No frequencies selected yet ✨</p>
+                        <p>Choose your healing energies</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            cartContainer.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-name">${item.name}</div>
+                    <div class="cart-item-freq">[${item.frequencies.join(', ')}]</div>
+                    <button class="remove-btn" onclick="removeFromCart(${item.id})">×</button>
+                </div>
+            `).join('');
+        }
+
+        // Update proceed button
+        function updateProceedButton() {
+            const btn = document.querySelector('.proceed-checkout-btn');
+            btn.disabled = cart.length === 0;
+        }
+
+        // Proceed to checkout
+        function proceedToCheckout() {
+            if (cart.length === 0) return;
+            
+            document.getElementById('customer-interface').style.display = 'none';
+            document.getElementById('checkout-interface').style.display = 'block';
+            
+            // Load selected frequencies in checkout
+            const checkoutFreqs = document.getElementById('checkout-frequencies');
+            checkoutFreqs.innerHTML = cart.map(item => 
+                `<div style="margin-bottom: 5px;">• ${item.name}: [${item.frequencies.join(', ')}]</div>`
+            ).join('');
+            
+            // Select default pendant
+            selectPendant('silver', 49);
+        }
+
+        // Back to shopping
+        function backToShopping() {
+            document.getElementById('checkout-interface').style.display = 'none';
+            document.getElementById('customer-interface').style.display = 'block';
+        }
+
+        // Select pendant
+        function selectPendant(type, price) {
+            document.querySelectorAll('.pendant-option').forEach(opt => opt.classList.remove('selected'));
+            document.querySelector(`[data-pendant="${type}"]`).classList.add('selected');
+            
+            selectedPendant = { type, price };
+            updatePricing();
+        }
+
+        // Select payment method
+        function selectPayment(method) {
+            document.querySelectorAll('.payment-method').forEach(opt => opt.classList.remove('selected'));
+            event.target.closest('.payment-method').classList.add('selected');
+            
+            selectedPayment = method;
+            
+            const detailsDiv = document.getElementById('payment-details');
+            detailsDiv.style.display = 'block';
+            
+            switch(method) {
+                case 'card':
+                    detailsDiv.innerHTML = `
+                        <div class="form-group">
+                            <label>Card Number *</label>
+                            <input type="text" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Expiry Date *</label>
+                                <input type="text" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label>CVV *</label>
+                                <input type="text" placeholder="123" required>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'paypal':
+                    detailsDiv.innerHTML = '<p style="color: #e0e0e0; text-align: center; padding: 20px;">You will be redirected to PayPal to complete payment.</p>';
+                    break;
+                case 'crypto':
+                    detailsDiv.innerHTML = `
+                        <div style="color: #e0e0e0; text-align: center; padding: 20px;">
+                            <p>Bitcoin Address: <strong style="color: #4ecdc4;">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</strong></p>
+                            <p style="margin-top: 10px;">Send exact amount and include order ID in transaction.</p>
+                        </div>
+                    `;
+                    break;
+                case 'bank':
+                    detailsDiv.innerHTML = `
+                        <div style="color: #e0e0e0; padding: 20px;">
+                            <p><strong>Bank Details:</strong></p>
+                            <p>Account: Mystic Frequency Pendants</p>
+                            <p>IBAN: GB12 ABCD 1234 5678 9012 34</p>
+                            <p>Reference: Include your order ID</p>
+                        </div>
+                    `;
+                    break;
+            }
+        }
+
+        // Update currency based on country
+        function updateCurrency() {
+            const country = document.getElementById('country-select').value;
+            if (country && currencyRates[country]) {
+                currentCurrency = {
+                    symbol: currencyRates[country].symbol,
+                    rate: currencyRates[country].rate,
+                    code: currencyRates[country].name
+                };
+                updatePricing();
+                updatePendantPrices();
+            }
+        }
+
+        // Update pendant prices
+        function updatePendantPrices() {
+            document.querySelectorAll('.pendant-price').forEach(priceEl => {
+                const basePrice = parseInt(priceEl.dataset.basePrice);
+                const convertedPrice = Math.round(basePrice * currentCurrency.rate);
+                priceEl.textContent = `${currentCurrency.symbol}${convertedPrice}`;
+            });
+        }
+
+        // Update pricing
+        function updatePricing() {
+            const pendantCost = Math.round(selectedPendant.price * currentCurrency.rate);
+            const programmingCost = Math.round(15 * currentCurrency.rate);
+            const shippingCost = Math.round(12 * currentCurrency.rate);
+            const total = pendantCost + programmingCost + shippingCost;
+            
+            document.getElementById('pendant-cost').textContent = `${currentCurrency.symbol}${pendantCost}`;
+            document.getElementById('programming-cost').textContent = `${currentCurrency.symbol}${programmingCost}`;
+            document.getElementById('shipping-cost').textContent = `${currentCurrency.symbol}${shippingCost}`;
+            document.getElementById('total-cost').textContent = `${currentCurrency.symbol}${total}`;
+        }
+
+        // Validate checkout form
+        function validateCheckoutForm() {
+            const requiredFields = ['first-name', 'last-name', 'customer-email', 'customer-phone', 'country-select', 'address-1', 'city', 'state', 'postal-code'];
+            const allFilled = requiredFields.every(id => {
+                const field = document.getElementById(id);
+                return field && field.value.trim() !== '';
+            });
+            
+            const btn = document.querySelector('.place-order-btn');
+            btn.disabled = !allFilled || !selectedPendant.type || !selectedPayment;
+        }
+
+        // Place order
+        function placeOrder() {
+            const customerData = {
+                firstName: document.getElementById('first-name').value,
+                lastName: document.getElementById('last-name').value,
+                email: document.getElementById('customer-email').value,
+                phone: document.getElementById('customer-phone').value,
+                country: document.getElementById('country-select').value,
+                address1: document.getElementById('address-1').value,
+                address2: document.getElementById('address-2').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                postalCode: document.getElementById('postal-code').value,
+                specialInstructions: document.getElementById('special-instructions').value
+            };
+            
+            const order = {
+                id: 'ORD-' + Date.now(),
+                date: new Date().toISOString(),
+                customer: customerData,
+                frequencies: [...cart],
+                pendant: selectedPendant,
+                paymentMethod: selectedPayment,
+                currency: currentCurrency,
+                pricing: {
+                    pendant: Math.round(selectedPendant.price * currentCurrency.rate),
+                    programming: Math.round(15 * currentCurrency.rate),
+                    shipping: Math.round(12 * currentCurrency.rate),
+                    total: Math.round((selectedPendant.price + 15 + 12) * currentCurrency.rate)
+                },
+                status: 'pending'
+            };
+            
+            orders.unshift(order);
+            localStorage.setItem('frequencyOrders', JSON.stringify(orders));
+            
+            // Show success page
+            document.getElementById('checkout-interface').style.display = 'none';
+            document.getElementById('success-interface').style.display = 'block';
+            document.getElementById('order-id-display').textContent = order.id;
+            
+            updateOrdersDisplay();
+        }
+
+        // Start new order
+        function startNewOrder() {
+            cart = [];
+            selectedPendant = { type: '', price: 0 };
+            selectedPayment = '';
+            
+            document.getElementById('success-interface').style.display = 'none';
+            document.getElementById('customer-interface').style.display = 'block';
+            
+            // Clear forms
+            document.querySelectorAll('input, textarea, select').forEach(field => {
+                if (field.type !== 'button' && field.type !== 'submit') {
+                    field.value = '';
+                }
+            });
+            
+            updateCartDisplay();
+            updateProceedButton();
+        }
+
+        // Filter frequencies
+        function filterFrequencies() {
+            const searchTerm = document.querySelector('.search-box').value.toLowerCase();
+            const groups = document.querySelectorAll('.frequency-group');
+            
+            groups.forEach(group => {
+                const header = group.querySelector('.group-header');
+                const content = group.querySelector('.group-content');
+                const items = content.querySelectorAll('.frequency-item');
+                let hasVisibleItems = false;
+                
+                items.forEach(item => {
+                    const name = item.querySelector('.frequency-name').textContent.toLowerCase();
+                    const frequencies = item.querySelector('.frequency-values').textContent.toLowerCase();
+                    
+                    if (name.includes(searchTerm) || frequencies.includes(searchTerm) || searchTerm === '') {
+                        item.style.display = 'flex';
+                        hasVisibleItems = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                if (hasVisibleItems || searchTerm === '') {
+                    group.style.display = 'block';
+                    if (searchTerm !== '') {
+                        content.classList.add('show');
+                        header.classList.add('expanded');
+                    }
+                } else {
+                    group.style.display = 'none';
+                }
+            });
+        }
+
+        // Admin functions
+        function showAdminLogin() {
+            document.getElementById('customer-interface').style.display = 'none';
+            document.getElementById('checkout-interface').style.display = 'none';
+            document.getElementById('success-interface').style.display = 'none';
+            document.getElementById('admin-interface').style.display = 'block';
+        }
+
+        function adminLogin() {
+            const password = document.getElementById('admin-password').value;
+            if (password === 'admin123') { // Change this password
+                document.getElementById('admin-login').style.display = 'none';
+                document.getElementById('admin-dashboard').style.display = 'block';
+                updateOrdersDisplay();
+            } else {
+                showToast('❌ Invalid password');
+            }
+        }
+
+        function closeAdmin() {
+            document.getElementById('admin-interface').style.display = 'none';
+            document.getElementById('customer-interface').style.display = 'block';
+            document.getElementById('admin-login').style.display = 'block';
+            document.getElementById('admin-dashboard').style.display = 'none';
+            document.getElementById('admin-password').value = '';
+        }
+
+        // Update orders display
+        function updateOrdersDisplay() {
+            const container = document.getElementById('orders-list');
+            
+            if (orders.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h3>📋 No orders yet</h3>
+                        <p>Customer orders will appear here automatically</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = orders.map(order => {
+                const frequencyCode = order.frequencies.map(f => f.frequencies).flat().join(',');
+                
+                return `
+                    <div class="order-item">
+                        <div class="order-header">
+                            <div><strong>${order.id}</strong></div>
+                            <div>${new Date(order.date).toLocaleDateString()}</div>
+                            <span style="background: ${order.status === 'pending' ? '#ffd700' : order.status === 'processing' ? '#4ecdc4' : '#48bb78'}; color: #1a1a2e; padding: 5px 12px; border-radius: 15px; font-weight: 600;">${order.status.toUpperCase()}</span>
+                        </div>
+                        
+                        <div style="margin: 15px 0; color: #e0e0e0;">
+                            <strong>👤 Customer:</strong> ${order.customer.firstName} ${order.customer.lastName}<br>
+                            <strong>📧 Email:</strong> ${order.customer.email}<br>
+                            <strong>📱 Phone:</strong> ${order.customer.phone}<br>
+                            <strong>🏠 Address:</strong> ${order.customer.address1}, ${order.customer.city}, ${order.customer.state}, ${order.customer.country}<br>
+                            <strong>💎 Pendant:</strong> ${order.pendant.type} - ${order.currency.symbol}${order.pricing.pendant}<br>
+                            <strong>💳 Payment:</strong> ${order.paymentMethod}<br>
+                            <strong>💰 Total:</strong> ${order.currency.symbol}${order.pricing.total} ${order.currency.code}
+                        </div>
+                        
+                        <div style="margin: 15px 0;">
+                            <strong>🎵 Selected Frequencies (${order.frequencies.length}):</strong>
+                            <div style="max-height: 150px; overflow-y: auto; margin: 10px 0; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                                ${order.frequencies.map(f => `<div style="color: #4ecdc4; margin-bottom: 5px;">• ${f.name}: [${f.frequencies.join(', ')}]</div>`).join('')}
+                            </div>
+                        </div>
+                        
+                        <div><strong>💻 Programming Code (Copy & Paste):</strong></div>
+                        <div class="frequency-code">
+                            (${frequencyCode})
+                            <button class="copy-btn" onclick="copyToClipboard('(${frequencyCode})')">📋 Copy</button>
+                        </div>
+                        
+                        ${order.customer.specialInstructions ? `<div style="margin-top: 15px;"><strong>📝 Special Instructions:</strong> ${order.customer.specialInstructions}</div>` : ''}
+                        
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <button onclick="updateOrderStatus('${order.id}', 'processing')" style="padding: 8px 16px; background: #4ecdc4; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 500;">⚙️ Processing</button>
+                            <button onclick="updateOrderStatus('${order.id}', 'completed')" style="padding: 8px 16px; background: #48bb78; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 500;">✅ Completed</button>
+                            <button onclick="updateOrderStatus('${order.id}', 'shipped')" style="padding: 8px 16px; background: #ffd700; color: #1a1a2e; border: none; border-radius: 8px; cursor: pointer; font-weight: 500;">📦 Shipped</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Update order status
+        function updateOrderStatus(orderId, status) {
+            orders = orders.map(order => {
+                if (order.id === orderId) {
+                    order.status = status;
+                }
+                return order;
+            });
+            
+            localStorage.setItem('frequencyOrders', JSON.stringify(orders));
+            updateOrdersDisplay();
+            showToast(`📋 Order ${orderId} marked as ${status}`);
+        }
+
+        // Copy to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('📋 Programming code copied to clipboard!');
+            });
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+
+        // Initialize when page loads
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
